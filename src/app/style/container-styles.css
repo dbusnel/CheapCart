@@ -1,0 +1,44 @@
+.container-border
+{
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    min-width: 30vw;
+}
+
+.container-input-box 
+{
+    width: 100%;
+}
+
+.container-items-list-box {
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin: 10px;
+    display: flex;
+    border-radius: 5px;
+    min-width: 30vw;
+    background-color: white;
+}
+
+.single-item-container {
+    display: flex;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.single-item-name {
+    padding-right: 5px;
+}
+
+.single-item-close-button 
+{
+    cursor: pointer;
+}
