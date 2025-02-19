@@ -18,3 +18,9 @@
     height: 100vh;
     flex-direction: column;
 }
+
+.location-button 
+{
+    width:10vw;
+    height:5vh;
+}

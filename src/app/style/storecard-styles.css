@@ -1,0 +1,15 @@
+.card-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding : 10px;
+}
+
+.name-distance-flexbox {
+    display: flex;
+}
+
+.distance-text {
+    flex-grow:1;
+    text-align: right;
+    margin-block: auto;
+}

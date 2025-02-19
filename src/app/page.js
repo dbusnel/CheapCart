@@ -4,6 +4,7 @@ import "./style/home-styles.css"
 import GroceriesContainer from "./components/GroceriesContainer";
 import { GetStores } from "./api/locate-stores/find-stores"
 import React from "react";
+import StoreCard from "./components/StoreCard";
 
 export default function Home() {
   const [coords, setCoords] = React.useState(null);
@@ -16,10 +17,9 @@ export default function Home() {
       <p className="app-text centered-text">I want: </p>
       <GroceriesContainer/>
       <br/>
-      <p className="app-text centered-text">My zip code is:</p>
-      <input placeholder="Enter ZIP code"></input>
-      <button onClick={async () => setCoords(await GetStores())} >Search</button>
+      <button className="location-button" onClick={async () => setCoords(await GetStores())} >Search</button>
       {(coords != null) && <p>test</p>}
+      <StoreCard storeName="Wollastons" storeAddress="369 Huntington Ave, Boston, MA 02115" distanceMeters="50"/>
     </div>
     );
 }
