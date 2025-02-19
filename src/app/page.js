@@ -1,7 +1,13 @@
+"use client"
+
 import "./style/home-styles.css"
 import GroceriesContainer from "./components/GroceriesContainer";
+import { GetStores } from "./api/locate-stores/find-stores"
+import React from "react";
 
 export default function Home() {
+  const [coords, setCoords] = React.useState(null);
+
   return (
     <div className="centered-container">
       <h1 className="page-title">CheapCart</h1>
@@ -12,7 +18,8 @@ export default function Home() {
       <br/>
       <p className="app-text centered-text">My zip code is:</p>
       <input placeholder="Enter ZIP code"></input>
-      <button>Search</button>
+      <button onClick={async () => setCoords(await GetStores())} >Search</button>
+      {(coords != null) && <p>test</p>}
     </div>
     );
 }
