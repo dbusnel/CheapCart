@@ -9,6 +9,10 @@ export default function Home() {
       <br/>
       <p className="app-text centered-text">I want: </p>
       <GroceriesContainer/>
+      <br/>
+      <p className="app-text centered-text">My zip code is:</p>
+      <input placeholder="Enter ZIP code"></input>
+      <button>Search</button>
     </div>
     );
 }
