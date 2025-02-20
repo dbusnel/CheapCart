@@ -23,7 +23,7 @@ export async function GetStores () {
         'lat': String(coords.lat),
         'lon': String(coords.lon),
         'tag': 'supermarket',
-        'radius': parseInt(500), //TODO: allow user to change radius
+        'radius': parseInt(5000), //TODO: allow user to change radius
         'format': 'json'
     };
     

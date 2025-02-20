@@ -7,7 +7,7 @@ import React from "react";
 import StoreCard from "./components/StoreCard";
 
 export default function Home() {
-  const [coords, setCoords] = React.useState(null);
+  const [stores, setStores] = React.useState(null);
 
   return (
     <div className="centered-container">
@@ -17,9 +17,15 @@ export default function Home() {
       <p className="app-text centered-text">I want: </p>
       <GroceriesContainer/>
       <br/>
-      <button className="location-button" onClick={async () => setCoords(await GetStores())} >Search</button>
-      {(coords != null) && <p>test</p>}
-      <StoreCard storeName="Wollastons" storeAddress="369 Huntington Ave, Boston, MA 02115" distanceMeters="50"/>
+      <button className="location-button" onClick={async () => setStores(await GetStores())} >Search</button>
+      {(stores != null) && stores.map((location) => 
+        (<StoreCard 
+          storeName={location.name} 
+          storeAddress={location.display_name} 
+          distanceMeters={location.distance}
+          key={location.display_name} />))}
+      
     </div>
     );
 }
+//<StoreCard storeName="Wollastons" storeAddress="369 Huntington Ave, Boston, MA 02115" distanceMeters="50"/>

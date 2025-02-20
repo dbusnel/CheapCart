@@ -15,6 +15,6 @@ export default function StoreCard(props) {
                 <p className="app-text distance-text"> {props.distanceMeters + " meters"}</p>
             </div>
             <br/>
-            <p className="app-text">{props.storeAddress}</p>
+            <p className="app-text address-text">{props.storeAddress}</p>
         </div>)
 }

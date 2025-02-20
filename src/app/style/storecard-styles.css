@@ -2,6 +2,8 @@
     border: 1px solid black;
     border-radius: 5px;
     padding : 10px;
+    height:20vh;
+    width:30vw;
 }
 
 .name-distance-flexbox {
@@ -12,4 +14,10 @@
     flex-grow:1;
     text-align: right;
     margin-block: auto;
+}
+
+.address-text 
+{
+    max-width: 800px;
+    flex-wrap: wrap;
 }
