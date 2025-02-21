@@ -18,12 +18,15 @@ export default function Home() {
       <GroceriesContainer/>
       <br/>
       <button className="location-button" onClick={async () => setStores(await GetStores())} >Search</button>
+      <br/>
+      <div className="stores-container">
       {(stores != null) && stores.map((location) => 
         (<StoreCard 
           storeName={location.name} 
           storeAddress={location.display_name} 
           distanceMeters={location.distance}
           key={location.display_name} />))}
+        </div>
       
     </div>
     );

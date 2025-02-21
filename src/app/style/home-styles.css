@@ -24,3 +24,12 @@
     width:10vw;
     height:5vh;
 }
+
+.stores-container {
+    display : flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin:auto;
+    padding:20px;
+    width: 95vw;    
+}

@@ -1,5 +1,7 @@
 import "../style/storecard-styles.css";
 
+const METER_PER_MILE = 0.000621371;
+
 /**
  * A listing for a single store
  * PROPS:
@@ -12,7 +14,7 @@ export default function StoreCard(props) {
         <div className="card-container">
             <div className="name-distance-flexbox">
                 <h1 className="app-text">{props.storeName}</h1>
-                <p className="app-text distance-text"> {props.distanceMeters + " meters"}</p>
+                <p className="app-text distance-text"> {(props.distanceMeters * METER_PER_MILE).toFixed(2) + " miles"}</p>
             </div>
             <br/>
             <p className="app-text address-text">{props.storeAddress}</p>
